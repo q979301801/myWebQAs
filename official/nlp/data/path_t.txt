@@ -1,0 +1,15 @@
+export SQUAD_DIR=~/squad  E:\BERT_TEST\bert_test2_code\bert_test\models-master\official\nlp\data\squad_data
+export BERT_DIR=~/uncased_L-12_H-768_A-12
+export OUTPUT_DATA_DIR=gs://some_bucket/datasets
+
+E:\BERT_TEST\bert_test2_code\bert_test\models-master\official\nlp\data\squad_data\train-v2.0.json
+python3 create_finetuning_data.py \
+ --squad_data_file=E:\BERT_TEST\bert_test2_code\bert_test\models-master\official\nlp\data\squad_data\train-v2.0.json
+ --vocab_file=E:\BERT_TEST\bert_test2_code\bert_test\uncased_L-12_H-768_A-12\vocab.txt
+ --train_data_output_path=E:\BERT_TEST\bert_test2_code\bert_test\models-master\official\nlp\data\squad_tfrecord\train.tf_record
+ --meta_data_file_path=E:\BERT_TEST\bert_test2_code\bert_test\models-master\official\nlp\data\squad_tfrecord\squad_meta_data
+ --fine_tuning_task_type=squad --max_seq_length=384
+
+--input_file=E:\BERT_TEST\bert_test2_code\bert_test\models-master\official\nlp\data\squad_pre_train_data\dev-v2.0.json
+--output_file=E:\BERT_TEST\bert_test2_code\bert_test\models-master\official\nlp\data\squad_pre_train_data\tf_examples.tfrecord
+--vocab_file=E:\BERT_TEST\bert_test2_code\bert_test\uncased_L-12_H-768_A-12\vocab.txt
