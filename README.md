@@ -1,2 +1,5 @@
 # myWebQAs
 基于bert框架，参考squad阅读理解，实现中文百度百科智能问答项目
+1.训练好的模型保存在model中，网络模型结构为4层transformer
+2.验证及测试的数据集保存在datas中
+3.执行run_eval.py即可调用模型查看模型验证效果，该脚本的运行参数保存在文件 参数.txt中，脚本运行完成的输出结果保存在eval_outputs中
